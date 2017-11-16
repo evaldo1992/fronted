@@ -1,0 +1,72 @@
+
+	<nav class="navbar navbar-expand navbar-dark fixed-top" style="background-color:#f35432">
+		<a class="navbar-brand" href="#">Plataforma estudiantil</a>		
+		
+		 
+		 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+	
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Cursos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" ui-sref="registrarCurso">Registrar</a>
+          <a class="dropdown-item" ui-sref="cursos">Mostrar</a>
+          <a class="dropdown-item" ui-sref="editarCurso({codigo:''})">Modificar</a>
+		  <a class="dropdown-item" ui-sref="eliminarCurso()">Eliminar</a>
+        </div>
+      </li>
+	  
+	  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Docentes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" ui-sref="registrarDocente">Registrar</a>
+          <a class="dropdown-item" ui-sref="docentes">Mostrar</a>
+          <a class="dropdown-item" ui-sref="editarDocente({codigo:''})">Modificar</a>
+		  <a class="dropdown-item" ui-sref="eliminarDocente()">Eliminar</a>
+        </div>
+      </li>
+	  
+	  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Estudiantes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" ui-sref="registrarEstudiante">Registrar</a>
+          <a class="dropdown-item" ui-sref="estudiantes">Mostrar</a>
+          <a class="dropdown-item" ui-sref="editarEstudiante({codigo:''})">Modificar</a>
+		  <a class="dropdown-item" ui-sref="eliminarEstudiante()">Eliminar</a>
+        </div>
+      </li>
+	  
+    </ul>
+   
+  </div>
+  
+		<ul class="navbar-nav ml-auto">
+			
+			
+			<li class="nav-item">
+				<a class="nav-link dropdown-toggle" id="btn_op_dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					
+				</a>
+				<div class="dropdown-menu dropdown-menu-right"  aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="#" ng-click="salir()">Salir</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	
+	
+
+	<div class="container" style="margin-top:120px">
+		<div class="row">
+			<div class="col-sm-10 mx-auto">
+				<ui-view name="main"></ui-view>	
+			</div>
+		</div>
+	</div>	
+	

@@ -1,0 +1,19 @@
+<h1 class="display-4">Eliminar un docente</h1><br>
+<form name="frm">
+	<div class="form-group">
+		<label>Ingrese la identificación del docente y precione enter</label>
+		<input type="text" name="cod" required ng-model="data.ide" class="form-control" ng-keyup="buscar($event)"/>
+	</div>
+	
+	<div class="form-group">
+		<label>Nombre</label>
+		<input type="text" name="nombre" disabled  ng-model="data.nombre" class="form-control"/>
+	</div>
+	
+	<div class="form-group">
+		<label>Apellidos</label>
+		<input type="text" ng-model="data.apellido" disabled class="form-control"/>
+	</div>
+	
+	<button class="btn btn-danger" ng-disabled="desactivar" ng-click="eliminar()" ng-disabled="frm.$invalid">Eliminar</button>
+</form>

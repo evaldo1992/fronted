@@ -1,0 +1,39 @@
+<h1 class="display-4">Editar docente</h1><br>
+<form name="frm">
+	<div class="form-group">
+		<label>Ingrese la idntificación del docente y precione enter</label>
+		<input type="text" name="ide" required ng-model="data.ide" class="form-control" ng-keyup="buscar($event)"/>
+	</div>
+	
+	<div class="form-group">
+		<label>Nombre</label>
+		<input type="text" name="nombre" required ng-disabled="desactivar"  ng-model="data.nombre" class="form-control"/>
+	</div>
+	
+	<div class="form-group">
+		<label>Apellidos</label>
+		<input type="text" ng-model="data.apellido" ng-disabled="desactivar" class="form-control"/>
+	</div>
+	
+	
+	<div class="form-group">
+		<label>Genero</label>
+		<select name="genero" required  ng-model="data.genero" ng-disabled="desactivar"  class="form-control">
+			<option value="">Seleccione</option>
+			<option value="M">Masculino</option>
+			<option value="F">Femenino</option>
+		</select>
+	</div>
+	
+	<div class="form-group">
+		<div class="form-check" ng-repeat="c in cursos">
+		  <label class="form-check-label">
+			<input class="form-check-input" name="curso[]" ng-checked="data.cursos.indexOf(c.codigo) > -1" ng-click="seleccionar(c.codigo)" type="checkbox" value="{{c.codigo}}">
+			{{c.nombre}}
+		  </label>
+		</div>
+	</div>
+	
+	
+	<button class="btn btn-primary" ng-click="guardar()" ng-disabled="frm.$invalid">Editar</button>
+</form>

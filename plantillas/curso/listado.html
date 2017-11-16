@@ -1,0 +1,19 @@
+<h1 class="display-4">Cursos</h1><br>
+<table class="table">
+	<thead>
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+			</tr>
+		</thead>
+	</thead>
+	<tbody>
+		<tr ng-repeat="c in servicio.listado">
+			<td>{{c.codigo}}</td>
+			<td>{{c.nombre}}</td>
+			<td>{{c.des}}</td>
+		</tr>
+	</tbody>
+</table>

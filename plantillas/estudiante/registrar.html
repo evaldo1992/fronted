@@ -1,0 +1,40 @@
+<h1 class="display-4">Registrar nuevo estudiante</h1><br>
+<form name="frm">
+	<div class="form-group">
+		<label>Identificación</label>
+		<input type="text" name="ide" required ng-model="data.ide" class="form-control"/>
+	</div>
+	
+	<div class="form-group">
+		<label>Nombre</label>
+		<input type="text" name="nombre" required  ng-model="data.nombre" class="form-control"/>
+	</div>
+	
+	<div class="form-group">
+		<label>Apellidos</label>
+		<input type="text" name="ape" required  ng-model="data.apellido" class="form-control"/>
+	</div>
+	
+	<div class="form-group">
+		<label>Genero</label>
+		<select name="genero" required  ng-model="data.genero" class="form-control">
+			<option value="">Seleccione</option>
+			<option value="M">Masculino</option>
+			<option value="F">Femenino</option>
+		</select>
+	</div>
+	
+	<div class="form-group">
+		<div class="form-check" ng-repeat="c in cursos">
+		  <label class="form-check-label">
+			<input class="form-check-input" name="curso[]" ng-checked="data.cursos.indexOf(c.codigo) > -1" ng-click="seleccionar(c.codigo)" type="checkbox" value="{{c.codigo}}">
+			{{c.nombre}}
+		  </label>
+		</div>
+
+	</div>
+	
+
+	
+	<button class="btn btn-primary" ng-click="guardar()" ng-disabled="frm.$invalid">Registrar</button>
+</form>

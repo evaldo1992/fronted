@@ -1,0 +1,21 @@
+<h1 class="display-4">Estudiantes</h1><br>
+<table class="table">
+	<thead>
+		<thead>
+			<tr>
+				<th>Identificación</th>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th>Cursos</th>
+			</tr>
+		</thead>
+	</thead>
+	<tbody>
+		<tr ng-repeat="c in servicio.listado">
+			<td>{{c.ide}}</td>
+			<td>{{c.nombre}}</td>
+			<td>{{c.apellido}}</td>
+			<td>{{c.cursos | cursos}}</td>
+		</tr>
+	</tbody>
+</table>
